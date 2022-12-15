@@ -21,9 +21,23 @@ meses2.forEach((mes2, i) => {
 });
 
 //Encontrar el indice de abril
+//La funcion FINDINDEX() manda a llamar la posicion del indice
+//Forma resumida cando solo tiene un solo parametro.
+const indicel = meses2.findIndex( mes => mes === 'Julio');
+console.log(indicel);
+
+// Forma completa
 const indice = meses2.findIndex((mes) => {
     if (mes === 'Abril') {
         return mes;
     }
 });
 console.log(indice);
+
+//ENCONTRAR UN INDICE DE UN ARREGLO DE OBJETOS
+const indiceO = carrito2.findIndex( (producto => {
+    if(producto.precio === 500){
+        return producto.precio;
+    }
+}));
+console.log(indiceO);
